@@ -1,0 +1,61 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.3.1 Safari/605.1.15" version="29.6.1">
+  <diagram name="Page-1" id="Kj-WDpBOr3GxHbg6foyw">
+    <mxGraphModel dx="1220" dy="1159" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0" adaptiveColors="none">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="v8siYZPc4x4K-frZV2EN-18" edge="1" parent="1" source="v8siYZPc4x4K-frZV2EN-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;align=center;" target="v8siYZPc4x4K-frZV2EN-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="v8siYZPc4x4K-frZV2EN-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=center;" value="&lt;b&gt;Records Identified from (1124):&lt;/b&gt;&lt;div&gt;- Web of Science (273)&lt;/div&gt;&lt;div&gt;- Science Direct (566)&lt;/div&gt;&lt;div&gt;- Springer (285)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="130" width="180" x="160" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="v8siYZPc4x4K-frZV2EN-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;gradientColor=none;fillColor=default;glass=0;strokeColor=default;align=center;" value="&lt;b&gt;Identification of studies via databases&lt;/b&gt;" vertex="1">
+          <mxGeometry height="30" width="420" x="160" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="v8siYZPc4x4K-frZV2EN-3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;rotation=-90;align=center;" value="&lt;b&gt;Identification&lt;/b&gt;" vertex="1">
+          <mxGeometry height="30" width="134" x="66" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="v8siYZPc4x4K-frZV2EN-4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;rotation=-90;align=center;" value="&lt;b&gt;Screening&lt;/b&gt;" vertex="1">
+          <mxGeometry height="30" width="222" x="22" y="414" as="geometry" />
+        </mxCell>
+        <mxCell id="v8siYZPc4x4K-frZV2EN-5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;rotation=-90;align=center;" value="&lt;b&gt;Included&lt;/b&gt;" vertex="1">
+          <mxGeometry height="30" width="97" x="84.5" y="585" as="geometry" />
+        </mxCell>
+        <mxCell id="v8siYZPc4x4K-frZV2EN-19" edge="1" parent="1" source="v8siYZPc4x4K-frZV2EN-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;align=center;" target="v8siYZPc4x4K-frZV2EN-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="v8siYZPc4x4K-frZV2EN-6" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=center;" value="&lt;b&gt;Records screened by&amp;nbsp;&lt;/b&gt;&lt;div&gt;&lt;b&gt;Title and Abstract (1100)&lt;/b&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="62" width="180" x="160" y="318" as="geometry" />
+        </mxCell>
+        <mxCell id="v8siYZPc4x4K-frZV2EN-7" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=center;" value="&lt;b&gt;Reports of included studies&lt;/b&gt;&lt;div&gt;&lt;b&gt;(n=122)&lt;/b&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="62" width="180" x="160" y="569" as="geometry" />
+        </mxCell>
+        <mxCell id="v8siYZPc4x4K-frZV2EN-15" edge="1" parent="1" source="v8siYZPc4x4K-frZV2EN-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;align=center;" target="v8siYZPc4x4K-frZV2EN-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="v8siYZPc4x4K-frZV2EN-8" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=center;" value="&lt;div style=&quot;&quot;&gt;&lt;b&gt;Record removed before screening:&lt;/b&gt;&lt;/div&gt;&lt;div&gt;- Duplicated records removed (n=24)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="62" width="180" x="380" y="194" as="geometry" />
+        </mxCell>
+        <mxCell id="v8siYZPc4x4K-frZV2EN-14" edge="1" parent="1" source="v8siYZPc4x4K-frZV2EN-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;align=center;" target="v8siYZPc4x4K-frZV2EN-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="v8siYZPc4x4K-frZV2EN-9" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=center;" value="&lt;b&gt;Record excluded&lt;/b&gt;&lt;div&gt;&lt;div&gt;- Non Financial Fraud (n=703)&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="62" width="180" x="380" y="318" as="geometry" />
+        </mxCell>
+        <mxCell id="v8siYZPc4x4K-frZV2EN-20" edge="1" parent="1" source="v8siYZPc4x4K-frZV2EN-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;align=center;" target="v8siYZPc4x4K-frZV2EN-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="v8siYZPc4x4K-frZV2EN-13" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=center;" value="&lt;b&gt;Records screened by&amp;nbsp;&lt;/b&gt;&lt;div&gt;&lt;b&gt;full text (n=&amp;nbsp;397)&lt;/b&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="62" width="180" x="160" y="460" as="geometry" />
+        </mxCell>
+        <mxCell id="v8siYZPc4x4K-frZV2EN-23" edge="1" parent="1" source="v8siYZPc4x4K-frZV2EN-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;align=center;" target="v8siYZPc4x4K-frZV2EN-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="v8siYZPc4x4K-frZV2EN-21" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=center;" value="&lt;b&gt;Record excluded&lt;/b&gt;&lt;div&gt;- Fraud not directly comparable to payment (226)&lt;br&gt;&lt;div&gt;- Theoretical/conceptual without real simulation (39)&lt;br&gt;&lt;div&gt;- Short papers (n=10)&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="101" width="180" x="380" y="440.5" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
