@@ -1,6 +1,5 @@
 \documentclass[a4paper,fleqn]{cas-dc}
 
-
 \usepackage[numbers,sort&compress]{natbib}
 \usepackage{prisma-flow-diagram} 
 \def\tsc#1{\csdef{#1}{\textsc{\lowercase{#1}}\xspace}}
@@ -16,68 +15,38 @@
 \shorttitle{Engineering AI Frameworks for Real-Time Financial Fraud Detection: A Systematic Review}    
 
 % Short author
-\shortauthors{D. Amaral and L. Faria}  
+\shortauthors{Anonymised for Review}  
 
 % Main title of the paper
 \title [mode = title]{Engineering AI Frameworks for Real-Time Financial Fraud Detection: A Systematic Review}  
 
-\tnotemark[1] 
-\tnotetext[1]{}
-\author[1]{Diogo Amaral}%[<options>]
-\cormark[1]
-\fnmark[1]
-\ead{1160088@isep.ipp.pt}
-\ead[url]{}
-\credit{Conceptualization, Methodology, Software, Formal analysis, Investigation, Writing - original draft}
-
-\affiliation[1]{organization={Instituto Superior de Engenharia do Porto (ISEP)},
-            city={Porto},
-            country={Portugal}}
-
-\author[2]{Luiz Faria}
-
-\fnmark[2]
-\ead{lef@isep.ipp.pt}
-
-\ead[url]{}
-\credit{Supervision, Conceptualization, Writing - review \& editing}
-\affiliation[2]{organization={Instituto Superior de Engenharia do Porto (ISEP)},
-            city={Porto},
-            country={Portugal}}
-
-\fntext[1]{https://orcid.org/0009-0004-0155-6817}
-
-\fntext[2]{https://orcid.org/0000-0002-1169-7785}
-
 \begin{abstract}
 The rapid expansion of digital payment systems has been accompanied by increasingly sophisticated fraud schemes, posing significant risks to financial stability and consumer confidence. 
 This systematic review examines studies published between January 2021 and October 2025 on the use of Machine Learning (ML) in financial fraud detection, focusing particularly on card-based payments, online banking, and real-time transaction monitoring. 
-Following the PRISMA 2020 guidelines, evidence was drawn from multiple bibliographic databases to ensure a comprehensive and reproducible synthesis of the field.
-The review develops a structured taxonomy that categorises AI techniques into supervised, unsupervised, semi-supervised, deep learning, graph-based, federated, and explainable AI approaches, distinguishing between batch and real-time operational contexts. 
-Beyond comparing model performance, it critically discusses methodological practices, evaluation metrics, and deployment challenges, including class imbalance, concept drift,adversarial robustness, limited computational resources in production environments, and the growing demand for transparent and accountable systems.
+Following the Preferred Reporting Items for Systematic Reviews and Meta-Analyses (PRISMA) 2020 guidelines, evidence was drawn from multiple bibliographic databases to ensure a comprehensive and reproducible synthesis of the field.
+The review develops a structured taxonomy that categorises Artificial Intelligence (AI) techniques into supervised, unsupervised, semi-supervised, deep learning, graph-based, federated, and explainable AI approaches, distinguishing between batch and real-time operational contexts. 
+Beyond comparing model performance, it critically discusses methodological practices, evaluation metrics, and deployment challenges, including class imbalance, concept drift, adversarial robustness, limited computational resources in production environments, and the growing demand for transparent and accountable systems.
 The analysis suggests a growing use of advanced architectures such as Transformers and Graph Neural Networks, ensemble strategies, and privacy-preserving techniques like federated learning, alongside an increasing use of model-agnostic explainability tools. 
 Drawing on these insights, the review highlights ongoing challenges related to real-world evaluation, cross-institutional data sharing, robust learning under drift, and the lack of standardised benchmarks.
 Finally, the review synthesises critical open challenges and delineates a clear frontier for future research, emphasising the need for system-centric evaluation rather than isolated algorithmic improvements.
 \end{abstract}
 
-
 \begin{highlights}
-\item Comprehensive PRISMA-compliant systematic review of AI and ML frameworks for financial fraud detection, spanning studies published between January 2021 and October 2025
-\item Structured taxonomy categorising contemporary approaches into supervised, unsupervised, deep learning, graph-based, federated, and explainable AI (XAI) across transaction, entity, and network levels
-\item Critical analysis of cross-cutting technical challenges, specifically addressing extreme class imbalance, concept drift, adversarial robustness, and the growing demand for regulatory-aligned transparency
-\item Identification of an apparent technological shift from classical tree-based ensembles toward advanced architectures such as Transformers, Graph Neural Networks (GNNs), and privacy-preserving Federated Learning
+\item Systematic review of 99 studies on machine learning for fraud detection (2021--2025)
+\item Taxonomy across supervised, deep learning, graph-based, and federated approaches
+\item Persistent gap identified between benchmark performance and real-world deployment
+\item Trend toward Transformers, Graph Neural Networks, and federated architectures
+\item Call for system-centric evaluation with standardised benchmarks and drift testing
 \end{highlights}
-
-
 
 % Keywords
 \begin{keywords}
 Fraud Detection \sep 
 Machine Learning \sep
 Deep Learning \sep
-Explainable AI \sep
+Explainable Artificial Intelligence \sep
 Graph Neural Networks \sep
-Anomaly Detection \sep
+Anomaly Detection
 \end{keywords}
 
 \maketitle
@@ -115,10 +84,10 @@ To guide this investigation, the review is structured around three research ques
 \item RQ2: How do these methods perform in terms of predictive accuracy, discrimination, and operational utility, and how robust are the reported results to methodological choices such as dataset selection, handling of class imbalance, and prevention of data leakage?
 \item RQ3: What methodological, technical and regulatory challenges remain insufficiently addressed, and what future research directions emerge for constructing scalable \cite{mill_opportunities_2023, sarna_ai_2025}, privacy‑preserving, explainable and adversarially robust fraud detection systems?
 \end{itemize}
-The remainder of this paper is organised as follows. Section 2 describes the systematic review methodology, including protocol registration, information sources, search strategy, eligibility criteria, study selection, data extraction, and quality appraisal. The following sections present a taxonomy of ML methods for fraud detection, report the qualitative and semi‑quantitative synthesis of findings, discuss cross‑cutting challenges and research gaps, and conclude with a discussion of the implications for practice and future research.
+The remainder of this paper is organised as follows. Section ~\ref{sec:methodology} describes the systematic review methodology, including protocol registration, information sources, search strategy, eligibility criteria, study selection, data extraction, and quality appraisal. The following sections present a taxonomy of ML methods for fraud detection, report the qualitative and semi‑quantitative synthesis of findings, discuss cross‑cutting challenges and research gaps, and conclude with a discussion of the implications for practice and future research.
 
 \section{Methodology}
-
+\label{sec:methodology}
 This study was conducted as a systematic review of research on ML methods for financial fraud detection, following the PRISMA 2020 guidelines. 
 The review protocol was pre-registered in an  \href{https://github.com/diogoamaralse/Engineering-AI-Frameworks-for-Real-Time-Financial-Fraud-Detection-A-Systematic-Review}{open repository} to enhance transparency and ensure reproducibility.
 
@@ -184,7 +153,9 @@ A PRISMA 2020 (Figure 1) flow diagram summarises the identification, screening, 
 \begin{figure}
 	\centering
 	\includegraphics[width=1\columnwidth]{figs/prisma.png}
-	\caption{PRISMA 2020 flow diagram}
+	\caption{PRISMA 2020 flow diagram. Identification, screening, eligibility, 
+and inclusion stages of the systematic review, with record counts and 
+exclusion reasons at each step.}
 	\label{FIG:1}
 \end{figure}
 
@@ -293,6 +264,7 @@ Hybrid and multimodal representations: Combinations of tabular, sequential, and 
 Hybrid architectures often combine separate modules (e.g. GNN + LSTM + gradient‑boosted trees) with ensemble strategies at the scoring layer \cite{wu_heterogeneous_2024, akour_hybrid_2025, ileberi_hybrid_2024, krishnavardhan_intelligent_2024}.
 
 \subsection{Taxonomy of model families}
+\label{sec:model-families}
 
 \subsubsection{Classical supervised learning and tree‑based ensembles}
 Logistic regression and linear models remain relevant as baselines and in highly regulated environments \cite{iqbal_time_2024, chhabra_voting_2023, el_barakaz_optimization_2022, plakandaras_credit_2022}. 
@@ -402,7 +374,7 @@ Evaluation metrics and operational alignment: Accuracy and AUC‑ROC dominate re
 Data leakage and experimental validity: Several threat patterns to validity recur: temporal leakage (using future information in training), customer‑level leakage (splitting transactions from the same customer across train and test), and tuning on test data. High headline performance on public benchmarks must therefore be interpreted cautiously unless evaluation protocols are clearly documented.
 
 \subsection{Summary of the taxonomy}
-The taxonomy developed in this chapter positions AI methods for financial fraud detection within a three‑dimensional space defined by problem level (transaction, entity, network), data modality (tabular, sequential, graph, multimodal), and model family (from classical ensembles to deep, graph‑based, federated and explainable architectures). 
+The taxonomy developed in this section~\ref{sec:model-families} positions AI methods for financial fraud detection within a three‑dimensional space defined by problem level (transaction, entity, network), data modality (tabular, sequential, graph, multimodal), and model family (from classical ensembles to deep, graph‑based, federated and explainable architectures). 
 This structured view reveals clear trends: tree‑based ensembles and deep sequence models dominate transaction‑level detection; graph‑based and federated models are emerging for network‑level and cross‑institutional fraud; and XAI increasingly acts as a necessary layer around complex models to meet operational and regulatory requirements. 
 Subsequent sections build on this taxonomy to compare performance across domains and analyse methodological quality.
 
@@ -446,7 +418,7 @@ While overall accuracy and AUC‑ROC remain high in these settings, authors ofte
 \caption{Key Approaches: Credit Card Fraud Detection}
 \label{tab:credit-card-approaches}
 \footnotesize
-\begin{tabular}{lcccc}
+\begin{tabular}{lcp{6cm}}
 \toprule
 \textbf{Category} & \textbf{Key Models} & \textbf{Strengths} \\
 \midrule
@@ -456,8 +428,6 @@ Hybrid/stacking & RF, SVM, KNN, XGBoost, CatBoost, LR & K-SMOTE-ENN; robust \cit
 Generative & VAEs, GANs, AE-GAN & Recall/F1 vs SMOTE/ADASYN  \cite{tayebi_generative_2025, cakir_enhanced_2024} \\
 \bottomrule
 \end{tabular}
-\smallskip
-\noindent \footnotesize 
 \end{table*}
 
 Blockchain analytics and cryptocurrency transaction fraud form a smaller but rapidly growing subset of the literature.
@@ -489,8 +459,6 @@ Blockchain & GNN/Federated & 0.97--0.99 & Elliptic/Ethereum & \cite{baabdullah_e
 Online Banking & CNN-LSTM & 0.95--0.98 & European (Kaggle-like)/Taiwan  & \cite{ileberi_hybrid_2024} \\
 \bottomrule
 \end{tabular}
-\smallskip
-\noindent \footnotesize 
 \end{table*}
 
 \subsection{Evaluation metrics: usage patterns and limitations}
@@ -554,9 +522,10 @@ These observations motivate the detailed cross-cutting analysis of challenges pr
 
 
 \section{Cross-Cutting Challenges}
+\label{sec:cross-cutting-challenges}
 AI‑driven fraud detection operates at the intersection of statistical learning, adversarial behaviour, regulatory pressure and operational constraints. 
 Across domains and model families, several cross‑cutting challenges repeatedly emerge: extreme class imbalance, concept drift, adversarial manipulation, explainability and governance, and privacy‑preserving learning at scale. 
-This chapter synthesises these themes and highlights their interactions.
+This section \ref{sec:cross-cutting-challenges} synthesises these themes and highlights their interactions.
 
 \subsection{Extreme class imbalance}
 
@@ -662,9 +631,10 @@ Federated learning introduces new dimensions of drift (institutional turnover, a
 Future work must therefore treat these aspects as components of a unified system design problem rather than as independent technical sub-tasks.
 
 \section{Discussion}
+\label{sec:discussion}
 The evidence assembled in this review paints a nuanced picture: 
 technically, AI‑driven methods for financial fraud detection are mature and diverse, yet their evaluation and deployment practices often lag behind the complexity and criticality of real‑world environments. 
-This chapter discusses the broader significance of the findings and draws out implications for practitioners and regulators.
+This section~\ref{sec:discussion} discusses the broader significance of the findings and draws out implications for practitioners and regulators.
 
 \subsection{Reconciling headline performance with real‑world constraints}
 
@@ -786,7 +756,7 @@ Future research must prioritise evaluation protocols that mirror production cond
 \clearpage
 \printcredits
 \clearpage
-\bibliographystyle{unsrtnat}
+\bibliographystyle{elsarticle-harv}
 \bibliography{main}
 \end{document}
 
