@@ -45,15 +45,16 @@
             city={Porto},
             country={Portugal}}
 
-\cortext[1]{Corresponding author}
 \fntext[1]{https://orcid.org/0009-0004-0155-6817}
+
+\fntext[2]{https://orcid.org/0000-0002-1169-7785}
 
 \begin{abstract}
 The rapid expansion of digital payment systems has been accompanied by increasingly sophisticated fraud schemes, posing significant risks to financial stability and consumer confidence. 
 This systematic review examines studies published between January 2021 and October 2025 on the use of Machine Learning (ML) in financial fraud detection, focusing particularly on card-based payments, online banking, and real-time transaction monitoring. 
 Following the PRISMA 2020 guidelines, evidence was drawn from multiple bibliographic databases to ensure a comprehensive and reproducible synthesis of the field.
 The review develops a structured taxonomy that categorises AI techniques into supervised, unsupervised, semi-supervised, deep learning, graph-based, federated, and explainable AI approaches, distinguishing between batch and real-time operational contexts. 
-Beyond comparing model performance, it critically discusses methodological practices, evaluation metrics, and deployment challenges, including class imbalance, concept drift, adversarial robustness, and the growing demand for transparent and accountable systems.
+Beyond comparing model performance, it critically discusses methodological practices, evaluation metrics, and deployment challenges, including class imbalance, concept drift,adversarial robustness, limited computational resources in production environments, and the growing demand for transparent and accountable systems.
 The analysis suggests a growing use of advanced architectures such as Transformers and Graph Neural Networks, ensemble strategies, and privacy-preserving techniques like federated learning, alongside an increasing use of model-agnostic explainability tools. 
 Drawing on these insights, the review highlights ongoing challenges related to real-world evaluation, cross-institutional data sharing, robust learning under drift, and the lack of standardised benchmarks.
 Finally, the review synthesises critical open challenges and delineates a clear frontier for future research, emphasising the need for system-centric evaluation rather than isolated algorithmic improvements.
@@ -87,7 +88,7 @@ Financial fraud remains a widespread global challenge, with losses from payment 
 Traditional rule based and scorecard systems, though once effective, increasingly struggle to keep pace with adaptive adversaries who exploit the growing complexity and speed of digital payment \cite{banirostam_analysis_2024, madhavappa_efficient_2025}.
 At the same time, the availability of large-scale transactional data and advances in ML have created new opportunities to detect non-linear patterns of fraudulent behaviour, capture temporal and relational dependencies, and adapt dynamically to emerging attack strategies \cite{deng_transformer-based_2025, kumar_revolutionising_2025}. 
 
-Over the past decade, researchers have applied a broad range of ML techniques, from classical models such as logistic regression, decision trees, and random forests, to gradient-boosted ensembles and deep learning architectures like recurrent networks, autoencoders, Transformers, and Graph Neural Networks, across domains including credit card payments, online banking, e-commerce, insurance, and cryptocurrency transactions and financial statement fraud  \cite{bin_sulaiman_review_2022, sarna_ai_2025, hashemi_fraud_2023, wang_temporal_2023, abadlia_enhanced_2025, abdullah_machine_2024, li_uncovering_2024, wei_evaluation_2023, wu_enhanced_2024}.
+Over the past decade, researchers have applied a broad range of ML techniques, from classical models such as logistic regression, decision trees, and random forests, to gradient-boosted ensembles and deep learning architectures like recurrent neural networks, autoencoders, Transformers, and Graph Neural Networks, across domains including credit card payments, online banking, e-commerce, insurance, and cryptocurrency transactions and financial statement fraud \cite{bin_sulaiman_review_2022, sarna_ai_2025, hashemi_fraud_2023, wang_temporal_2023, abadlia_enhanced_2025, abdullah_machine_2024, li_uncovering_2024, wei_evaluation_2023, wu_enhanced_2024}.
 
 However, these studies differ greatly in terms of data realism, evaluation protocols, and the extent to which they align with operational constraints such as real-time decision-making, regulatory compliance, and limited computational resources in production environments \cite{chen_deep_2025, ahmed_secure_2024, khan_model-agnostic_2025}. 
 
@@ -110,7 +111,7 @@ The final objective is to synthesize the evidence to identify high-priority rese
 
 To guide this investigation, the review is structured around three research questions:
 \begin{itemize}
-\item RQ1: What categories of ML methods have been employed for detecting fraud in financial transaction systems since 2021, and how are they deployed across different data types and system architectures?
+\item RQ1: What categories of AI and ML methods have been employed for detecting fraud in financial transaction systems since 2021, and how are they deployed across different data types and system architectures?
 \item RQ2: How do these methods perform in terms of predictive accuracy, discrimination, and operational utility, and how robust are the reported results to methodological choices such as dataset selection, handling of class imbalance, and prevention of data leakage?
 \item RQ3: What methodological, technical and regulatory challenges remain insufficiently addressed, and what future research directions emerge for constructing scalable \cite{mill_opportunities_2023, sarna_ai_2025}, privacy‑preserving, explainable and adversarially robust fraud detection systems?
 \end{itemize}
@@ -119,7 +120,7 @@ The remainder of this paper is organised as follows. Section 2 describes the sys
 \section{Methodology}
 
 This study was conducted as a systematic review of research on ML methods for financial fraud detection, following the PRISMA 2020 guidelines. 
-The review protocol was pre-registered in an open repository to enhance transparency and ensure reproducibility. 
+The review protocol was pre-registered in an  \href{https://github.com/diogoamaralse/Engineering-AI-Frameworks-for-Real-Time-Financial-Fraud-Detection-A-Systematic-Review}{open repository} to enhance transparency and ensure reproducibility.
 
 This section outlines the methodological framework, covering protocol registration, eligibility criteria, information sources, search strategy, study selection, data extraction, quality appraisal, and synthesis procedures.
 
@@ -152,8 +153,7 @@ We also excluded work on healthcare, insurance, or supply-chain fraud when finan
 Theoretical or purely conceptual contributions without empirical evaluation on real or realistically simulated transaction data were not considered, nor were short papers, posters, extended abstracts, editorials, non–peer-reviewed reports, or studies published in languages other than English.
 
 \subsection{Information sources}
-To obtain comprehensive coverage of both computer science and financial systems research, several electronic databases and digital libraries were consulted, including Web of Science, Elsevier ScienceDirect, and SpringerLink, making these data sources essential for avoiding any type of bias.
-
+To obtain comprehensive coverage of both computer science and financial systems research, a total of three databases were consulted: Web of Science, Elsevier ScienceDirect, and SpringerLink. These sources are essential for avoiding any type of bias.
 \subsection{Search Strategy}
 The core search concepts were Financial fraud and related phenomena, ML techniques and Detection/monitoring focus. Controlled vocabularies (where available) and free‑text terms were combined using Boolean operators and field restrictions.
 In Web of Science, the search was conducted using the following query: 
@@ -173,7 +173,7 @@ All search strategies, including database specific adaptations and any refinemen
 All retrieved records were exported and managed using Zotero for reference organisation and Rayyan for screening. 
 The search process identified 1,124 records across the three databases.
 Duplicate records were removed using automated matching (based on title, author, DOI, and publication year), followed by manual verification, removing 24 duplicates in total. 
-The selection process proceeded in two stages:
+The selection process proceeded in two stages.
 
 First, two reviewers independently screened titles and abstracts against the eligibility criteria, labelling each record as “included” or “excluded”. This stage resulted in 397 included and 703 excluded papers.
 
@@ -191,46 +191,46 @@ A PRISMA 2020 (Figure 1) flow diagram summarises the identification, screening, 
 \subsection{Data extraction}
 A standardised data extraction form was developed and piloted on a small subset of the included studies to ensure consistency and clarity. 
 The form was designed to capture a comprehensive range of information across several dimensions:
+\begin{itemize}
+\item Bibliographic details: Author names, year of publication, publication venue (journal or conference), and, where relevant, the country or region associated with the study.
 
-Bibliographic details: Author names, year of publication, publication venue (journal or conference), and, where relevant, the country or region associated with the study.
+\item Fraud domain and context: Type of fraud investigated (e.g. card‑present, card‑not‑present, anti‑money laundering, online banking, e‑commerce, or crypto‑asset transactions), the institutional setting (bank, payment processor, marketplace, etc.), and whether the focus of the study was on detection, prevention, or both.
 
-Fraud domain and context: Type of fraud investigated (e.g. card‑present, card‑not‑present, anti‑money laundering, online banking, e‑commerce, or crypto‑asset transactions), the institutional setting (bank, payment processor, marketplace, etc.), and whether the focus of the study was on detection, prevention, or both.
+\item Data characteristics: Dataset name or source (e.g. public benchmark or proprietary), sample size, number of features, class imbalance ratio, temporal characteristics such as the period covered, and data modality (tabular, sequential, graph‑structured, or multimodal).
 
-Data characteristics: Dataset name or source (e.g. public benchmark or proprietary), sample size, number of features, class imbalance ratio, temporal characteristics such as the period covered, and data modality (tabular, sequential, graph‑structured, or multimodal).
+\item Model characteristics: Machine Learning or AI techniques employed (e.g. random forest, XGBoost, LSTM, Transformer, Graph Neural Network, autoencoder, GAN, federated learning framework, or XAI technique). Where applicable, model architecture details and any hybrid or ensemble configurations were also recorded.
 
-Model characteristics: Machine Learning or AI techniques employed (e.g. random forest, XGBoost, LSTM, Transformer, Graph Neural Network, autoencoder, GAN, federated learning framework, or XAI technique). Where applicable, model architecture details and any hybrid or ensemble configurations were also recorded.
+\item Evaluation protocol: Training, validation, and testing procedures; cross‑validation strategies, hold‑out type (temporal or random split), presence of external validation; approach to hyperparameter tuning (e.g. grid search, Bayesian optimisation, or metaheuristics) and any measures implemented to minimise data leakage.
 
-Evaluation protocol: Training, validation, and testing procedures; cross‑validation strategies, hold‑out type (temporal or random split), presence of external validation; approach to hyperparameter tuning (e.g. grid search, Bayesian optimisation, or metaheuristics) and any measures implemented to minimise data leakage.
-
-Performance metrics: Reported metrics such as accuracy, precision, recall, F1‑score, AUC‑ROC, PR‑AUC, MCC, and cost‑sensitive or latency‑related measures. 
+\item Performance metrics: Reported metrics such as accuracy, precision, recall, F1‑score, AUC‑ROC, PR‑AUC, MCC, and cost‑sensitive or latency‑related measures. 
 The primary comparison metric, along with any confidence intervals or statistical tests, was also documented.
 
-Operational and regulatory aspects: Consideration of real‑time constraints, deployment architecture, strategies for managing concept drift, adversarial robustness, privacy preserving measures, and explainability or model transparency approaches.
+\item Operational and regulatory aspects: Consideration of real‑time constraints, deployment architecture, strategies for managing concept drift, adversarial robustness, privacy preserving measures, and explainability or model transparency approaches.
 
-Authors’ conclusions and limitations: Summary of key findings, reported limitations, and any commentary on generalisability or proposed directions for future research.
-
+\item Authors’ conclusions and limitations: Summary of key findings, reported limitations, and any commentary on generalisability or proposed directions for future research.
+\end{itemize}
 The extraction form was refined iteratively as new patterns and reporting styles were encountered, with all modifications recorded in the review protocol to maintain methodological transparency.
 
 \subsection{Quality appraisal and risk of bias assessment}
-Given the heterogeneity of ML studies in terms of data, methods, and evaluation practices, a tailored quality assessment instrument was developed by adapting elements from existing tools for diagnostic test accuracy and prediction model studies. 
+Given the heterogeneity of AI and ML studies in terms of data, methods, and evaluation practices, a tailored quality assessment instrument was developed by adapting elements from existing tools for diagnostic test accuracy and prediction model studies. 
 The instrument included criteria grouped into the following domains:
+\begin{itemize}
+\item Data and sampling: representativeness of the dataset with respect to real‑world fraud prevalence and patterns, clarity of inclusion/exclusion criteria for data and handling of missing data.
 
-Data and sampling: representativeness of the dataset with respect to real‑world fraud prevalence and patterns, clarity of inclusion/exclusion criteria for data and handling of missing data.
+\item Study design and evaluation: appropriateness of the train/test split (particularly temporal splits for time dependent data), use of external validation, avoidance of data leakage (e.g. preventing leakage of future information, customer‑level splitting), adequacy of hyperparameter tuning and model selection procedures.
 
-Study design and evaluation: appropriateness of the train/test split (particularly temporal splits for time‑dependent data), use of external validation, avoidance of data leakage (e.g. preventing leakage of future information, customer‑level splitting), adequacy of hyperparameter tuning and model selection procedures.
+\item Outcome measurement: choice of performance metrics in relation to class imbalance and operational objectives, reporting of multiple complementary metrics (e.g. PR‑AUC alongside AUC‑ROC), provision of uncertainty estimates where possible.
 
-Outcome measurement: choice of performance metrics in relation to class imbalance and operational objectives, reporting of multiple complementary metrics (e.g. PR‑AUC alongside AUC‑ROC), provision of uncertainty estimates where possible.
+\item Model complexity and interpretability: consideration of overfitting, regularisation, calibration, and interpretability or explainability where relevant.
 
-Model complexity and interpretability: consideration of overfitting, regularisation, calibration, and interpretability or explainability where relevant.
-
-Reporting transparency: completeness of methodological description, including model configuration, feature engineering, and computational budget.
- 
+\item Reporting transparency: completeness of methodological description, including model configuration, feature engineering, and computational budget.
+ \end{itemize}
 Each study was assessed independently by two reviewers on these criteria, using a three‑level scale (low, moderate, or high risk of bias/concern) for each domain. 
 An overall judgement of study quality was recorded, and any discrepancies were resolved by discussion. Quality assessment results were used to contextualise the synthesis (e.g. by giving more weight to robustly designed studies and highlighting where evidence is based on high‑risk‑of‑bias work).
 
 \subsection{Synthesis methods}
 Given the diversity of datasets, model types, and evaluation protocols, a formal meta‑analysis was not anticipated to be feasible for most outcomes. 
-Instead, a mixed narrative and semi‑quantitative synthesis approach was adopted:
+Instead, a mixed narrative and semi‑quantitative synthesis approach was adopted.
 
 Studies were grouped by fraud domain, data modality, and primary model family (e.g. tree‑based ensembles, sequence models, graph‑based models, federated approaches).
 
@@ -315,7 +315,7 @@ Feed‑forward deep neural networks (DNNs) are used to model complex feature int
 Fine‑tuned DNNs can outperform classical models when sufficient labelled data and good regularisation are available, but they often require careful architecture design and significant computational resources \cite{krishnavardhan_intelligent_2024, de_zarza_optimizing_2023}. 
 Their black‑box nature raises concerns about interpretability.
 
-Recurrent neural networks (RNNs), LSTMs and GRUs are prevalent in sequential fraud detection tasks where transaction history and behavioural trajectories are crucial \cite{karthikeyan_intelligent_2023, akour_hybrid_2025, zioviris_intelligent_2024, alam_intelligent_2023, sivasubramanian_predicting_2024, sobana_sophisticated_2025, wei_evaluation_2023}. 
+RNNs, such as LSTMs and GRUs are prevalent in sequential fraud detection tasks where transaction history and behavioural trajectories are crucial \cite{karthikeyan_intelligent_2023, akour_hybrid_2025, zioviris_intelligent_2024, alam_intelligent_2023, sivasubramanian_predicting_2024, sobana_sophisticated_2025, wei_evaluation_2023}. 
 Bi‑directional LSTMs and attention‑augmented LSTMs capture both short and long‑range dependencies, improving recall on subtle behavioural shifts such as account takeover or gradual escalation of transaction amounts \cite{sulaiman_credit_2024, hu_hybrid_2025, ranganatha_enhancing_2025}. 
 Studies report high classification accuracy and recall, but comparisons against strong tree‑based baselines are sometimes inconclusive, particularly on static tabular datasets.
 
@@ -428,6 +428,8 @@ When resampling strategies such as K‑means SMOTE‑ENN are integrated, AUPRC v
 Generative models and oversampling: Generative approaches using VAEs, GANs and hybrid AE‑GAN architectures for synthetic fraud generation often report improvements in minority‑class recall and F1 relative to classical oversampling methods (e.g. SMOTE, ADASYN), while maintaining or improving overall accuracy \cite{chen_variational_2021, ferreira_when_2021, zhi_research_2025}. 
 However, the extent of these gains varies considerably across datasets and evaluation protocols, and few studies systematically assess the impact on calibration or out‑of‑sample robustness \cite{tayebi_generative_2025, ferreira_when_2021, zhang_multi-view_2025, zhi_research_2025}.
 
+Table~\ref{tab:credit-card-approaches} summarises the four main methodological categories identified across these studies. Tree-based ensembles, deep learning architectures, hybrid stacking frameworks, and generative models, alongside their representative models and the core performance advantages each offers under class-imbalanced conditions.
+
 Overall, credit card fraud studies tend to report very high headline performance figures (accuracy > 99\%, AUC‑ROC near 1.0) on public benchmarks, but these results are often obtained under favourable conditions (e.g. random splits, limited assessment of drift), which may overstate real‑world performance.
 
 \subsubsection{Online payments and e‑commerce}
@@ -439,12 +441,12 @@ Studies targeting real‑time online payment streams increasingly explore hybrid
 
 While overall accuracy and AUC‑ROC remain high in these settings, authors often highlight the importance of achieving acceptable latency; however, explicit latency measurements and throughput benchmarks are rarely present.
 
-\begin{table}[htbp]
+\begin{table*}[htbp]
 \centering
 \caption{Key Approaches: Credit Card Fraud Detection}
 \label{tab:credit-card-approaches}
 \footnotesize
-\begin{tabular}{p{1.7cm} p{2.8cm} p{3.8cm}}
+\begin{tabular}{lcccc}
 \toprule
 \textbf{Category} & \textbf{Key Models} & \textbf{Strengths} \\
 \midrule
@@ -454,7 +456,9 @@ Hybrid/stacking & RF, SVM, KNN, XGBoost, CatBoost, LR & K-SMOTE-ENN; robust \cit
 Generative & VAEs, GANs, AE-GAN & Recall/F1 vs SMOTE/ADASYN  \cite{tayebi_generative_2025, cakir_enhanced_2024} \\
 \bottomrule
 \end{tabular}
-\end{table}
+\smallskip
+\noindent \footnotesize 
+\end{table*}
 
 Blockchain analytics and cryptocurrency transaction fraud form a smaller but rapidly growing subset of the literature.
 
@@ -497,17 +501,19 @@ Accuracy is almost universally reported and often extremely high (> 99\%) in cre
 
 Precision, recall and F1‑score are common, particularly in credit card fraud work, where minority‑class performance is emphasised. High F1 values (0.8–0.9+) are regularly reported for advanced ensembles and deep models, though recall at very low false‑positive rates, which is more aligned with operational use, is seldom analysed explicitly.
 
-AUC‑ROC is the most frequently used discrimination metric, with values often in the 0.95–1.0 range for ensembles and deep architectures. However, under extreme imbalance, AUC‑ROC can obscure differences in performance in the region of the ROC curve most relevant to deployment (e.g. very low FPR).
+AUC‑ROC is the most frequently used discrimination metric, with values often in the 0.95–1.0 range for ensembles and deep architectures. Table~\ref{tab:synthesis-performance} summarises the top-performing models and their reported AUC‑ROC ranges across the three primary fraud domains covered in this review, illustrating the consistently high discrimination scores achieved under benchmark conditions. 
 
-PR‑AUC (AUPRC) appears more regularly in some recent credit card studies, where authors explicitly acknowledge that PR‑AUC better reflects the trade‑off between precision and recall in highly imbalanced settings. 
+However, under extreme imbalance, AUC‑ROC can obscure differences in performance in the region of the ROC curve most relevant to deployment (e.g. very low FPR).
+
+PR‑AUC (AUPRC) appears more regularly in some recent credit card studies, where authors explicitly acknowledge that PR‑AUC better reflects the trade‑off between precision and recall in highly imbalanced settings.
+
 Nonetheless, PR‑AUC is still under‑reported relative to AUC‑ROC \cite{kennedy_synthesizing_2024}.
 
 MCC and cost‑based metrics are used in a minority of works. Where reported, MCC tends to correlate with F1 and AUC‑ROC but offers a more balanced view under skewed class distributions. Cost‑sensitive evaluations, which assign different weights to false positives and false negatives based on economic impact, are rarely implemented, despite their obvious relevance to financial institutions.
 
-Latency and throughput metrics are largely absent, even in papers that claim real‑time or near‑real‑time operation. A few studies discuss computational efficiency qualitatively (e.g. speed‑ups of LightGBM relative to other boosting frameworks), but comprehensive runtime benchmarks are uncommon.
+Latency and throughput metrics are largely absent, even in papers that claim real‑time or near‑real‑time operation. A few studies discuss computational efficiency qualitatively (e.g. speed‑ups of LightGBM relative to other boosting frameworks), but comprehensive runtime benchmarks are uncommon. Notably, as Table~\ref{tab:synthesis-performance} reflects, no domain consistently reports latency alongside discrimination metrics, pointing to a structural gap in how performance is communicated.
 
 In summary, while standard ML metrics indicate strong discriminative performance for many models, there is a systematic gap between reported metrics and the operational performance indicators that matter in real‑world fraud systems.
-
 \subsection{Imbalance handling and its impact on performance}
 Strategies for handling severe class imbalance are ubiquitous and have a measurable impact on both performance and interpretability.
 
